@@ -1,0 +1,75 @@
+
+body {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+table {
+		margin-left: 20px;
+		margin-right: 20px;
+		-webkit-border-radius: 6px;
+		border: thin solid black;
+		border-collapse: collapse;
+}
+
+td, th {
+	border: thin dotted gray;
+	padding: 5px;
+}
+
+div {
+	border: thin dotted gray;
+}
+
+#header {
+	background-color: light-gray;
+	min-height: 100px;
+}
+
+#accountAdminFormId {
+	background-color : #33CC66;
+}
+
+#main {
+	background-color: #CCCCCC; 
+	min-height: 100px;
+}
+
+#footer {
+	background-color: green;
+	min-height: 100px;
+}
+
+#logo {
+	background-color: #CCFFFF;
+	float: left;
+}
+
+#distchart {
+	background-color: #99FFCC;
+	min-height: 20px;
+	min-width: 20px;
+	float: left;
+}
+
+#networthchart {
+	background-color: #FFCC99;
+	min-width: 20px;
+	min-height: 20px;
+	float: right;
+}
+
+#accounttablediv {
+	width: 60%;
+	height: 150px;
+	padding: 1px;
+	overflow: scroll;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.cellcolor {
+	background: #fcba7a;
+}

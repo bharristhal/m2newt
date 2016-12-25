@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>MyMoney</title> 
+        <link href="styles/MyMoney.css" rel="stylesheet"> 
+        <link href="scripts/jquery-ui-1.10.3.custom/css/pepper-grinder/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+        <script src="scripts/jquery-2.0.2.js"></script> 
+        <script src="scripts/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+        	google.load('visualization', '1.0', {'packages':['corechart','table']});
+       	</script>
+	</head>
+
+	<body>
+		<div id="header">
+			<table id="headerTable">
+				<tr>
+					<td>
+						<div id="networthChart_div" style="width=300px;"></div>
+					</td>
+					<td>
+						<table>
+							<tr><td>
+								<div id="distchart_div" style="width=300px;"></div>
+							</td></tr>
+						</table>
+					</td>
+				</tr>
+			</table>	
+		</div>
+
+		<div id="mainL1">
+			<table id="mainL1Table">
+				<tr>
+					<div id="mainL4">
+						<table id="mainL4Table">
+							<tr>
+								<td>
+									<form id="accountAdminFormId" name="accountAdminForm" action="scripts/readAccounts.php" method="POST">
+										<table>
+											<tr>
+												<td>Account:</td><td> <select name="account" id="accountSelect"></select></td>
+												<td>Transaction Date:</td> <td><input type="text" name="txn_date" id="datepicker"></td>
+												<td>Contribution Amount:</td><td> <input type="text" name="txn_amount" id="txn_amount"></td>
+                                                <td>Balance:</td><td> <input type="text" name="bal_amount" id="bal_amount"></td>
+												<td> <button name="save" id="btnSave" type="submit">Save</button> </td>
+											</tr>
+										</table>
+										<input type="hidden" name="action" value="saveTransaction" id="action">
+									</form>
+								</td>
+							</tr>
+						</table>
+					</div>			
+				</tr>
+				<tr>
+					<div id="mainL2">
+						<table id="mainL2Table">
+							<tr>
+								<td>
+									<div id="AccountsTable_div"></div>
+								</td>
+								<td>
+									<div id="mainL3">
+										<table id="mainL3Table">
+											<tr>
+												<td>
+													<div id="SingleAccountChart_div"></div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div id="SingleAccountTable_div"></div>
+												</td>	
+											</tr>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>							
+				</tr>
+			</table>
+		</div>	
+
+		<div id="footer">
+		</div>
+        <script src="scripts/MyMoney.js"></script> 
+	</body>
+</html>
